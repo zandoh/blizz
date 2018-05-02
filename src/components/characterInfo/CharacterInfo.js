@@ -1,5 +1,6 @@
 import React from "react";
 import store from "../../store";
+import CharacterClose from "../characterClose/CharacterClose";
 
 class CharacterInfo extends React.Component {
   constructor(props) {
@@ -67,6 +68,7 @@ class CharacterInfo extends React.Component {
           src={this.state.baseImgUrl + this.state.character.thumbnail}
           alt={this.state.character.name + "'s Avatar"}
         />
+        <CharacterClose />
       </div>
     );
   }
