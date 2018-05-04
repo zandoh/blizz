@@ -11,7 +11,10 @@ class CharacterClose extends React.Component {
 
   render() {
     return (
-      <div className="closeContainer" onClick={this.onCloseClick.bind(this)}>
+      <div
+        className="characterCloseContainer"
+        onClick={this.onCloseClick.bind(this)}
+      >
         <h1>Close</h1>
       </div>
     );

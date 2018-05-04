@@ -27,8 +27,7 @@ class App extends Component {
       <div className="App">
         <SearchForm />
         {this.state.characterLoaded && (
-          <div className="App-characterInfoContainer">
-            <h1>Character Info....</h1>
+          <div className="characterContainer">
             <CharacterInfo />
           </div>
         )}

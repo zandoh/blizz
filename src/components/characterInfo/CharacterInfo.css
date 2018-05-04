@@ -1,0 +1,11 @@
+.characterInfoContainer {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .characterInfoContainer {
+    flex-direction: column;
+  }
+}

@@ -4,16 +4,18 @@ import { addCharacter, removeCharacter } from "../../actions/Actions";
 import { bindActionCreators } from "redux";
 import { uri, key } from "../../const";
 import "./SearchForm.css";
+import * as loading from "../../assets/img/loading.svg";
 
 class SearchForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      isLoaded: "",
+      isLoaded: true,
       name: "",
       realms: "",
-      userRealm: ""
+      userRealm: "",
+      error: false
     };
   }
 
@@ -60,6 +62,8 @@ class SearchForm extends React.Component {
             Search
           </button>
         </form>
+        {this.state.error && <h2 className="error">Character Not Found</h2>}
+        {!this.state.isLoaded && <img src={loading} alt="Loading..." />}
       </div>
     );
   }
@@ -70,13 +74,11 @@ class SearchForm extends React.Component {
       .then(
         result => {
           this.setState({
-            isLoaded: true,
             realms: result.realms
           });
         },
         error => {
           this.setState({
-            isLoaded: true,
             error
           });
         }
@@ -103,14 +105,27 @@ class SearchForm extends React.Component {
   };
 
   getCharacterInfo() {
+    this.setState({
+      error: false,
+      isLoaded: false
+    });
     fetch(
       `${uri}/character/${this.state.userRealm}/${
         this.state.name
-      }?locale=en_US&apikey=${key}`
+      }?fields=stats,talents,items,progression,professions,pvp&locale=en_US&apikey=${key}`
     )
       .then(result => result.json())
       .then(data => {
-        this.setCharacter(data);
+        this.setState({
+          isLoaded: true
+        });
+        if (data.name !== undefined) {
+          this.setCharacter(data);
+        } else {
+          this.setState({
+            error: true
+          });
+        }
       });
   }
 
