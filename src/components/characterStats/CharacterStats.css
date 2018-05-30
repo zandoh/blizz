@@ -3,3 +3,18 @@
   flex-direction: row;
   flex: 1 1 100%;
 }
+
+.statsColumn h2 {
+  font-size: 18px;
+}
+
+.characterGeneralWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 1rem;
+}
+
+.characterGeneralWrapper .characterName {
+  font-size: 20px;
+}

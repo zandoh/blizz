@@ -1,0 +1,13 @@
+.character-attribute {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.character-attribute .name {
+  color: #d7a12e;
+}
+
+.character-attribute .attribute {
+  color: #fff;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { removeCharacter } from "../../actions/Actions";
 import { bindActionCreators } from "redux";
+import * as close from "../../assets/img/close.png";
 import "./CharacterClose.css";
 
 class CharacterClose extends React.Component {
@@ -15,7 +16,7 @@ class CharacterClose extends React.Component {
         className="characterCloseContainer"
         onClick={this.onCloseClick.bind(this)}
       >
-        <h1>Close</h1>
+        <img src={close} alt="Close" />
       </div>
     );
   }

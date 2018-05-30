@@ -1,3 +1,10 @@
+.characterCloseContainer {
+  position: absolute;
+  right: 50px;
+  height: min-content;
+  width: min-content;
+}
+
 .characterCloseContainer tspan {
   white-space: pre;
 }
