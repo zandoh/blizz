@@ -28,6 +28,7 @@ class CharacterInfo extends React.Component {
           totalHonorableKills: null
         },
         stats: {
+          ilvl: null,
           health: null,
           powerType: null,
           power: null,
@@ -78,7 +79,23 @@ class CharacterInfo extends React.Component {
           rangedSpeed: null,
           rangedDps: null
         },
-        items: {},
+        items: {
+          back: {},
+          chest: {},
+          feet: {},
+          finger1: {},
+          finger2: {},
+          hands: {},
+          head: {},
+          legs: {},
+          mainHand: {},
+          neck: {},
+          shoulder: {},
+          trinket1: {},
+          trinket2: {},
+          waist: {},
+          wrist: {}
+        },
         professions: {
           primary: {
             name: null,
@@ -111,7 +128,7 @@ class CharacterInfo extends React.Component {
   setCharacterState() {
     console.log(
       "setCharacterState... store state.. ach points...",
-      store.getState().characterReducer.character.achievementPoints
+      store.getState().characterReducer.character.items
     );
     this.setState(prevState => ({
       ...prevState,
@@ -135,6 +152,8 @@ class CharacterInfo extends React.Component {
             .totalHonorableKills
         },
         stats: {
+          ilvl: store.getState().characterReducer.character.items
+            .averageItemLevel,
           health: store.getState().characterReducer.character.stats.health,
           powerType: store.getState().characterReducer.character.stats
             .powerType,
@@ -216,12 +235,30 @@ class CharacterInfo extends React.Component {
           rangedSpeed: store.getState().characterReducer.character.stats
             .rangedSpeed,
           rangedDps: store.getState().characterReducer.character.stats.rangedDps
+        },
+        items: {
+          back: store.getState().characterReducer.character.items.back,
+          chest: store.getState().characterReducer.character.items.chest,
+          feet: store.getState().characterReducer.character.items.feet,
+          finger1: store.getState().characterReducer.character.items.finger1,
+          finger2: store.getState().characterReducer.character.items.finger2,
+          hands: store.getState().characterReducer.character.items.hands,
+          head: store.getState().characterReducer.character.items.head,
+          legs: store.getState().characterReducer.character.items.legs,
+          mainHand: store.getState().characterReducer.character.items.mainHand,
+          neck: store.getState().characterReducer.character.items.neck,
+          shoulder: store.getState().characterReducer.character.items.shoulder,
+          trinket1: store.getState().characterReducer.character.items.trinket1,
+          trinket2: store.getState().characterReducer.character.items.trinket2,
+          waist: store.getState().characterReducer.character.items.waist,
+          wrist: store.getState().characterReducer.character.items.wrist
         }
       }
     }));
   }
 
   render() {
+    console.log("character items....", this.state.character.items);
     return (
       <div className="characterInfoContainer">
         <CharacterStats
@@ -229,7 +266,7 @@ class CharacterInfo extends React.Component {
           stats={this.state.character.stats}
         />
         <CharacterCompare />
-        <CharacterItems />
+        <CharacterItems items={this.state.character.items} />
         <CharacterClose />
       </div>
     );

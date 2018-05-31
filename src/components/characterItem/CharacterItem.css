@@ -1,0 +1,90 @@
+.characterItemRow {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.characterSlot {
+  width: 90px;
+}
+
+.characterItem {
+  position: relative;
+  display: inline-block;
+}
+
+.characterItem:hover .characterItemPopover {
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+}
+
+.characterItemPopover {
+  flex-direction: column;
+  visibility: hidden;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  left: calc(-50% - 60px);
+  height: auto;
+  width: 200px;
+  margin-bottom: 50px;
+  padding: 1rem;
+  transition: all linear 0.5s;
+}
+
+.characterItemPopover:before {
+  position: absolute;
+  flex: 1 1;
+  z-index: -1;
+  content: "";
+  top: -8px;
+  right: calc(50% - 10px);
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #d7a12e transparent;
+}
+
+.popoverItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popoverItem.item-name {
+  color: #d7a12e;
+  margin-bottom: 10px;
+}
+
+.popoverItem.item-stat {
+  font-size: 14px;
+}
+
+.quality-poor {
+  border: 1px solid #9d9d9d;
+}
+
+.quality-common {
+  border: 1px solid #fff;
+}
+
+.quality-uncommon {
+  border: 1px solid #1eff00;
+}
+
+.quality-rare {
+  border: 1px solid #0070ff;
+}
+
+.quality-epic {
+  border: 1px solid #a335ee;
+}
+
+.quality-legendary {
+  border: 1px solid #ff8000;
+}
+.quality-artifact {
+  border: 1px solid #e6cc80;
+}
+
+.quality-heirloom {
+  border: 1px solid #00ccff;
+}

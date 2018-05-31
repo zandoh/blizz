@@ -1,0 +1,4 @@
+div.characterItemsContainer {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
