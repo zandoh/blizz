@@ -1,7 +1,7 @@
 import React from "react";
 import store from "../../store";
 import CharacterStats from "../characterStats/CharacterStats";
-import CharacterCompare from "../characterCompare/CharacterCompare";
+import CharacterCompares from "../characterCompares/CharacterCompares";
 import CharacterItems from "../characterItems/CharacterItems";
 import CharacterClose from "../characterClose/CharacterClose";
 import "./CharacterInfo.css";
@@ -126,10 +126,6 @@ class CharacterInfo extends React.Component {
   }
 
   setCharacterState() {
-    console.log(
-      "setCharacterState... store state.. ach points...",
-      store.getState().characterReducer.character.items
-    );
     this.setState(prevState => ({
       ...prevState,
       character: {
@@ -258,14 +254,13 @@ class CharacterInfo extends React.Component {
   }
 
   render() {
-    console.log("character items....", this.state.character.items);
     return (
       <div className="characterInfoContainer">
         <CharacterStats
           general={this.state.character.general}
           stats={this.state.character.stats}
         />
-        <CharacterCompare />
+        <CharacterCompares />
         <CharacterItems items={this.state.character.items} />
         <CharacterClose />
       </div>

@@ -1,0 +1,13 @@
+.comparesHeader {
+  width: 100%;
+  color: #d7a12e;
+}
+
+.comparesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+}

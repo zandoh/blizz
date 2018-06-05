@@ -98,7 +98,6 @@ class SearchForm extends React.Component {
   };
 
   handleSubmit = event => {
-    console.log("character submitted: ", this.state);
     event.preventDefault();
     this.removeCharacter();
     this.getCharacterInfo();

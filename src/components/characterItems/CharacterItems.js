@@ -6,6 +6,7 @@ class CharacterItems extends React.Component {
   render() {
     return (
       <div className="characterItemsContainer characterColumn">
+        <h2 className="itemsHeader">Items</h2>
         <div className="characterItemRow">
           <div className="characterSlot">Head: </div>
           <CharacterItem item={this.props.items.head} />

@@ -10,8 +10,8 @@ class CharacterStats extends React.Component {
     super(props);
 
     this.state = {
-      race: null,
-      class: null
+      race: "",
+      class: ""
     };
   }
 
@@ -81,6 +81,9 @@ class CharacterStats extends React.Component {
                   this.state.race +
                   " " +
                   this.state.class}
+              </div>
+              <div className="characteriLvl">
+                iLvl: <span className="yellow">{this.props.stats.ilvl}</span>
               </div>
             </div>
           </div>

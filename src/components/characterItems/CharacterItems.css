@@ -2,3 +2,8 @@ div.characterItemsContainer {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.itemsHeader {
+  width: 100%;
+  color: #d7a12e;
+}

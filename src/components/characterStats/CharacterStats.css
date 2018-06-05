@@ -13,8 +13,16 @@
   flex-direction: column;
   justify-content: space-evenly;
   padding: 0 1rem;
+  position: relative;
+  width: 100%;
 }
 
 .characterGeneralWrapper .characterName {
   font-size: 20px;
+}
+
+.characterGeneralWrapper .characteriLvl {
+  position: absolute;
+  top: 15px;
+  right: 0px;
 }

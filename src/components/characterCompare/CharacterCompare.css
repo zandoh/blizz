@@ -1,0 +1,24 @@
+.characterCompareContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 50%;
+  padding: 1rem 0rem;
+  align-items: center;
+}
+
+.characterCompareContainer .compareImage {
+  width: 85px;
+  height: 85px;
+}
+
+.compareImage:hover {
+  cursor: pointer;
+}
+
+.horde {
+  border: 2px solid #8c1616;
+}
+
+.alliance {
+  border: 2px solid #162c57;
+}
