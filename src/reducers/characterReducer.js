@@ -14,6 +14,10 @@ const characterReducer = (state = 0, action) => {
         character: null,
         characterLoaded: false
       };
+    case actionType.GET_CHARACTER:
+      return {
+        character: state.character
+      };
     default:
       return state;
   }

@@ -50,8 +50,6 @@ class CharacterStats extends React.Component {
       });
   }
 
-  mapPropToResult() {}
-
   //Helper function to format a number adding a comma after every 3rd
   numberWithCommas(x) {
     return x ? x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : 0;

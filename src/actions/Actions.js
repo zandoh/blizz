@@ -8,3 +8,7 @@ export const addCharacter = payload => ({
 export const removeCharacter = () => ({
   type: actionType.REMOVE_CHARACTER
 });
+
+export const getCharacter = () => ({
+  type: actionType.GET_CHARACTER
+});
