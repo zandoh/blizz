@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://wow.zclark.me",
   "dependencies": {
-    "gh-pages": "^1.2.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
@@ -17,6 +17,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build -r https://github.com/zandoh/blizz"
+    "deploy": "gh-pages -d build"
   }
 }
