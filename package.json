@@ -2,7 +2,7 @@
   "name": "blizz",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://wow.zclark.me",
+  "homepage": "https://github.com/zandoh/blizz",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.3.2",
