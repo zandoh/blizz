@@ -69,7 +69,7 @@ class SearchForm extends React.Component {
   }
 
   getRealms() {
-    fetch(uri + "/realm/status?locale=en_US&apikey=" + key)
+    fetch(uri + "/realm/status?locale=en_US&access_token=" + key)
       .then(res => res.json())
       .then(
         result => {
@@ -111,7 +111,7 @@ class SearchForm extends React.Component {
     fetch(
       `${uri}/character/${this.state.userRealm}/${
         this.state.name
-      }?fields=stats,talents,items,progression,professions,pvp&locale=en_US&apikey=${key}`
+      }?fields=stats,talents,items,progression,professions,pvp&locale=en_US&access_token=${key}`
     )
       .then(result => result.json())
       .then(data => {

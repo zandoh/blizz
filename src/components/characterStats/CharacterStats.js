@@ -22,7 +22,7 @@ class CharacterStats extends React.Component {
 
   //Helper function to fetch the string of race as a number is returned in the initial call
   raceLookup() {
-    fetch(`${uri}/races?locale=en_US&apikey=${key}`)
+    fetch(`${uri}/races?locale=en_US&access_token=${key}`)
       .then(result => result.json())
       .then(data => {
         for (var index in data.races) {
@@ -37,7 +37,7 @@ class CharacterStats extends React.Component {
 
   //Helper function to fetch the string of class as a number is returned in the initial call
   classLookup() {
-    fetch(`${uri}/classes?locale=en_US&apikey=${key}`)
+    fetch(`${uri}/classes?locale=en_US&access_token=${key}`)
       .then(result => result.json())
       .then(data => {
         for (var index in data.classes) {
